@@ -23,3 +23,5 @@ class Subject(Base):
     #another relationship definitions
     resources = relationship("Resource", back_populates="subject")
     progress_records = relationship("Progress", back_populates="subject")
+    study_blocks = relationship("StudyBlock", back_populates="subject")
+

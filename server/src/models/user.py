@@ -21,4 +21,6 @@ class User(Base):
     updated_at = Column(DateTime(timezone=True), onupdate=func.now())
     profile = relationship("Profile", back_populates="user", uselist=False)
     progress_records = relationship("Progress", back_populates="user")
+    schedules = relationship("Schedule", back_populates="user")
+
 
